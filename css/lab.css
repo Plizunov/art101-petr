@@ -1,0 +1,46 @@
+h1 {
+  color: indigo;
+  font size: 250%
+}
+
+h2 {
+  color: darkblue;
+  font-size: 30px;
+}
+
+p {
+  font-family: "Arial";
+  text-indent: 10px;
+  margin-left: 0px;
+  margin-right: 0px;
+  color: black;
+}
+
+body {
+  background-color: #cfe1ff;
+  width: auto;
+  height: auto;
+  padding: 15px;
+  margin: 30px;
+  border: solid 3px #000000;
+  font-size: 20px;
+}
+
+img {
+  width: auto;
+  height: 150px;
+  padding: 3px;
+  margin: 5px;
+  border: solid 5px #000000;
+}
+
+ul {
+  font-family: "Arial";
+  background-color: #DEF2FF;
+  width: 200px;
+  height: auto;
+  padding: 15px;
+  margin: 10px;
+  border: solid 3px #000000;
+  font-size: 15px;
+}
