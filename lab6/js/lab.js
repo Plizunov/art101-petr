@@ -20,4 +20,4 @@ var myMainRide = {
 };
 
 document.writeln("Main modes of transportation: " + myTransport + "<br>");
-document.writeln("My main vehicle: <pre>", JSON.stringify(myMainRide, null, '\t'), "</pre");
+document.writeln("My main vehicle: <pre>", JSON.stringify(myMainRide, null, '\t'), "</pre>");
