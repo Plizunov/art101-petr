@@ -38,3 +38,12 @@ h3 {
   color: darkblue;
   font-size: 25px;
 }
+
+#placeholder {
+  font-size: 15px;
+  color: darkred;
+}
+
+#output {
+  font-size: 35px;
+}
