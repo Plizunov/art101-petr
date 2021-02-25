@@ -5,85 +5,64 @@
 * Assignment: Lab 13
 */
 
-/*
-//constants that define the words used for the different multiples
-var word3 = "Fizz";
-var word5 = "Buzz";
-var word7 = "Boom";
-*/
+//define the function fizzBuzz
+function fizzBuzz(f1, f2, f3, f4, maxnum, fizz, buzz, boom, bang){
 
-function fizzBuzz(maxnum){
+  //loop through numbers 1 through maxnum, which is defined by the value the user enters in the input field
   for (var i = 1; i <= maxnum; i++){
+
+    //create a string that we will later mutate
     var string = "";
 
-    if(i%3 == 0){
-      string = string + "Fizz";
+    //check if the current number is a multiple of the factor 1 and append a word to the string if true
+    if(i%f1 == 0){
+      string = string + fizz;
     }
 
-    if(i%5 == 0){
-      string = string + "Buzz";
+    //check if the current number is a multiple of the factor 2 and append a word to the string if true
+    if(i%f2 == 0){
+      string = string + buzz;
     }
 
-    if(i%7 == 0){
-      string = string + "Boom";
+    //check if the current number is a multiple of the factor 3 and append a word to the string if true
+    if(i%f3 == 0){
+      string = string + boom;
     }
 
-    if(string.length > 1){
+    //check if the current number is a multiple of the factor 4 and append a word to the string if true
+    if(i%f4 == 0){
+      string = string + bang;
+    }
+
+    //if any multiples were detected for the current number, print out the full string
+    if(string.length >= 1){
       string = i + ": " + string + "!";
-    }else{
+    }else{ //if no multiples were detected, print the number and a space
       string = i + ": ";
     }
 
+    //log the string int he console for debugging
     console.log(string);
+
+    //append the output the to the ouput div
     $("#output").append('<p>' + string + '</p>');
   }
 }
 
+//on button click, call the function
 $("#button").click(function(){
-  var num = $("#input").val();
-  fizzBuzz(num);
-  console.log("Button Clicked")
+
+  //get values from the input fields
+  var w1 = $("#inputw1").val(); //word 1
+  var w2 = $("#inputw2").val(); //word 2
+  var w3 = $("#inputw3").val(); //word 3
+  var w4 = $("#inputw4").val(); //word 4
+  var fac1 = $("#inputf1").val(); //factor 1
+  var fac2 = $("#inputf2").val(); //factor 2
+  var fac3 = $("#inputf3").val(); //factor 3
+  var fac4 = $("#inputf4").val(); //factor 4
+  var num = $("#inputMax").val(); //limit for loops
+
+  //call the fizzbuzz function, parsing the input values as arguments
+  fizzBuzz(fac1, fac2, fac3, fac4, num, w1, w2, w3, w4);
 });
-
-
-/*
-//declare sortinghat function with a string argument
-function sortinghat(str){
-
-  //declare var len and assign the length of the argument to it
-  var len = str.length;
-  //divide the len value by 4 and use the remainder to determine which outcome will be returned
-  var mod = len % 4;
-
-  //if the remainder is 0, return Gryddinfor
-  if(mod == 0){
-    return "Gryddinfor"
-  }
-  //if the remainder is 1, return Pufflehuff
-  else if(mod == 1){
-    return "Pufflehuff"
-  }
-  //if the remainder is 2, return Clavenraw
-  else if(mod == 2){
-    return "Clavenraw"
-  }
-  //if the remainder is 3, return Innerslyth
-  else if(mod == 3){
-    return "Innerslyth"
-  }
-}
-
-//locate the button using jQuery and attach a function execution on click
-$("#button").click(function() {
-
-  //get the input value fromt he input form in the HTML doc
-  var name = $("#input").val();
-
-  //parse the received value to the sortinghat function and assign the result value to var house
-  var house = sortinghat(name);
-
-  //append the new value to the output div and atach a corresponsing house picture
-  $("#output").after("<p>The Sorting Hat has sorted you into " + house + "</p></br>" + "<img src='img/" + house + ".png' id='image'></br>");
-
-});
-*/
