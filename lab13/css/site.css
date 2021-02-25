@@ -1,0 +1,53 @@
+h1 {
+  color: indigo;
+  font size: 250%
+}
+
+h2 {
+  color: darkblue;
+  font-size: 30px;
+}
+
+p {
+  font-family: "Arial";
+  text-indent: 10px;
+  margin-left: 0px;
+  margin-right: 0px;
+  color: black;
+}
+
+body {
+  background-color: #cfe1ff;
+  width: auto;
+  height: auto;
+  padding: 15px;
+  margin: 30px;
+  border: solid 3px #000000;
+  font-size: 20px;
+}
+
+img {
+  width: auto;
+  height: 250px;
+  padding: 3px;
+  margin: 5px;
+  border: dotted 5px #000000;
+}
+
+h3 {
+  color: darkblue;
+  font-size: 25px;
+}
+
+.input-output{
+  border: solid 3px #000000;
+  margin: 5px;
+  padding: 3px;
+  width: auto;
+}
+
+#output{
+  columns: 5;
+  font-size: 15px;
+  line-height: 15px;
+}
