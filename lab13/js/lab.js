@@ -54,14 +54,23 @@ $("#button").click(function(){
 
   //get values from the input fields
   var w1 = $("#inputw1").val(); //word 1
+  debugger;
   var w2 = $("#inputw2").val(); //word 2
+  debugger;
   var w3 = $("#inputw3").val(); //word 3
+  debugger;
   var w4 = $("#inputw4").val(); //word 4
+  debugger;
   var fac1 = $("#inputf1").val(); //factor 1
+  debugger;
   var fac2 = $("#inputf2").val(); //factor 2
+  debugger;
   var fac3 = $("#inputf3").val(); //factor 3
+  debugger;
   var fac4 = $("#inputf4").val(); //factor 4
+  debugger;
   var num = $("#inputMax").val(); //limit for loops
+  debugger;
 
   //call the fizzbuzz function, parsing the input values as arguments
   fizzBuzz(fac1, fac2, fac3, fac4, num, w1, w2, w3, w4);
