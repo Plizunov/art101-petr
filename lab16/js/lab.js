@@ -16,8 +16,7 @@ $.ajax({
   dataType: "json",
 
   success: function(data) {
-    var content = JSON.stringify(data);
-    $("#output1");
+    console.log(data);
   },
 
   error: function(jqXHR, textStatus, errorThrown){
