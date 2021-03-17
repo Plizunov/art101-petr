@@ -8,8 +8,8 @@
 
 $("#button").click(function(){
 
-    $("#title").innerHTML = "";
-    $("#output").innerHTML = "";
+    $("#title").empty();
+    $("#output").empty();
 
     $.ajax({
     url: "https://xkcd.com/640/info.0.json",
