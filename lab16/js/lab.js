@@ -6,20 +6,31 @@
 * Assignment: Lab 10
 */
 
-$.ajax({
-  url: "https://xkcd.com/614/info.0.json",
+$("#button").click(function(){
 
-  data: {},
+    $("#title").innerHTML = "";
+    $("#output").innerHTML = "";
 
-  type: "GET",
+    $.ajax({
+    url: "https://xkcd.com/640/info.0.json",
 
-  dataType: "json",
+    data: {},
 
-  success: function(data) {
-    console.log(data);
-  },
+    type: "GET",
 
-  error: function(jqXHR, textStatus, errorThrown){
-    console.log("Error:", textStatus, errorThrown);
-  }
+    dataType: "json",
+
+    success: function(data) {
+      var stringified = JSON.stringify(data);
+      console.log(stringified);
+      var comicObj = JSON.parse(stringified);
+      console.log(comicObj);
+      $("#title").append("Title: " + comicObj.title + "!");
+      $("#output").append("<img src='" + comicObj.img + "'>");
+    },
+
+    error: function(jqXHR, textStatus, errorThrown){
+      console.log("Error:", textStatus, errorThrown);
+    }
+  });
 });
