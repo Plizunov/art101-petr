@@ -7,7 +7,7 @@
 */
 
 $.ajax({
-  url: "https://xkcd.com/info.0.json",
+  url: "https://xkcd.com/614/info.0.json",
 
   data: {},
 
